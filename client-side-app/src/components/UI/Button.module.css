@@ -1,0 +1,35 @@
+.button {
+  border: none;
+  color: white;
+  text-align: center;
+  border-radius: 5px;
+  padding: 1rem 0;
+  font-weight: bold;
+  font-size: 1rem;
+}
+.button:hover,
+.button:active {
+  cursor: pointer;
+  transform: scale(1.01);
+  transition: all 0.3s ease-in-out;
+}
+.button-speech {
+  color: rgb(51, 51, 190);
+  outline: 1px solid rgb(51, 51, 190);
+  background-color: white;
+  width: 20%;
+}
+.button-speech:hover,
+.button-speech:active {
+  background-color: rgb(51, 51, 190);
+  color: white;
+}
+
+.button-next {
+  width: 100%;
+  background-color: #36d399;
+}
+.button-next:hover,
+.button-next:active {
+  background-color: #228a64;
+}

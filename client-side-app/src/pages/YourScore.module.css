@@ -1,0 +1,11 @@
+.score-style__text {
+  text-align: center;
+  margin: 2rem 0;
+  font-size: large;
+  font-weight: bolder;
+}
+.score-style__NO {
+  margin-left: 1rem;
+  color: red;
+  font-size: 1.5rem;
+}

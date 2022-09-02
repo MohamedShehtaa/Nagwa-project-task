@@ -1,0 +1,14 @@
+.btn-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 2rem 0;
+  border-top: 1px solid gray;
+  border-bottom: 1px solid gray;
+  margin: 2rem 0;
+}
+.message-style {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+}

@@ -1,0 +1,16 @@
+.word-question {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+.question-counter {
+  text-align: center;
+  font-size: 1.2rem;
+}
+.center-text {
+  text-align: center;
+  margin: 4rem;
+}
+
