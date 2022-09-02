@@ -17,9 +17,12 @@ practice categorizing a set of words according to their part of speech.
      - dotenv
      - typeScript in development environment
 
-   - to run As development you should write in cmd line: 1- npm run watch. 2-
-     npm run dev --> look at package.json to see scripts
-   - to run as production you should write in cmdline : 1- npm run start
+   - to run As development you should write in cmd line: 
+      1- npm run watch. 
+      2- npm run dev --> look at package.json to see scripts
+      
+   - to run as production you should write in cmdline : 
+      1- npm run start
 
 - now the backend app ready to recive Http requestes and it can response to it.
 
@@ -34,7 +37,8 @@ practice categorizing a set of words according to their part of speech.
      - regular css with css Modules technique
      - javaScript
 
-   - to run the App you should write in cmd line: 1- npm run start.
+   - to run the App you should write in cmd line: 
+      1- npm run start.
 
 - now the front end app ready to work open your browser in localhost:3000.
 
