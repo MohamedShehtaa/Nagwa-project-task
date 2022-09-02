@@ -33,3 +33,12 @@
 .button-next:active {
   background-color: #228a64;
 }
+
+.button-speech:disabled,
+.button-speech[disabled="true"] {
+  border: none;
+  background-color: #cccccc;
+  color: #666666;
+  cursor: not-allowed;
+  transform: none;
+}

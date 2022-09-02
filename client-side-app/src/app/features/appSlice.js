@@ -2,7 +2,8 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
     count: 0,
     score: 0,
-    rank: 0
+    rank: 0,
+    disabled: false
 };
 export const appSlice = createSlice( {
     name: 'counter',
@@ -24,8 +25,11 @@ export const appSlice = createSlice( {
         restApp: ( state ) => {
             state.score = 0;
             state.count = 0;
+        },
+        disabledButtons: ( state, action ) => {
+            state.disabled = action.payload;
         }
 
     }
 } )
-export const { increaseCounter, increseScore, setRank, restApp } = appSlice.actions;
+export const { increaseCounter, increseScore, setRank, restApp, disabledButtons } = appSlice.actions;

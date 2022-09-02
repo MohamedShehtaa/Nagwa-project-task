@@ -8,12 +8,11 @@ import Button from "../components/UI/Button";
 import WordContainer from "../components/wordContainer/WordContainer";
 import styles from "./Qustion.module.css";
 import { useGetWordsQuery } from "../services/wordsApi";
-import { increaseCounter, setRank } from "../app/features/appSlice";
+import { increaseCounter, setRank, disabledButtons } from "../app/features/appSlice";
 import AppContainer from '../components/UI/AppContainer'
 import { usePostScoreMutation } from '../services/rankApi'
 
 export default function Question() {
-    console.log( "hi" )
     const { data, IsError, isLoading } = useGetWordsQuery();
     const [ nextState, setNextState ] = useState( false );
     const [ postScore ] = usePostScoreMutation();
@@ -25,10 +24,12 @@ export default function Question() {
     const score = appStore.score * 10;
 
 
+
     const dataElmentNo = count < 9 ? count : count - 1;
 
     const counterHandler = async () => {
         setNextState( false )
+        dispatch( disabledButtons( false ) )
 
         if ( count < 10 ) {
             dispatch( increaseCounter() );

@@ -1,9 +1,10 @@
-import React from 'react'
-import styles from './Button.module.css'
+import React from "react";
+import styles from "./Button.module.css";
 
 export default function Button( props ) {
     const clickHandler = ( event ) => {
-        props.onClick( event )
+        props.onClick( event );
+
     }
 
     const buttonCategory =
@@ -14,6 +15,13 @@ export default function Button( props ) {
                 : "";
 
     return (
-        <button onClick={ clickHandler } className={ `${ styles[ `button` ] } ${ buttonCategory }` } value={ props.content }>{ props.content }</button>
-    )
+        <button
+            disabled={ props.disable }
+            onClick={ clickHandler }
+            className={ `${ styles[ `button` ] } ${ buttonCategory }` }
+            value={ props.content }
+        >
+            { props.content }
+        </button>
+    );
 }
