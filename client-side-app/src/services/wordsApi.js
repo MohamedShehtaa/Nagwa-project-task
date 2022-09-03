@@ -5,7 +5,7 @@ export const wordsApi = createApi( {
     baseQuery: fetchBaseQuery( {
         baseUrl: 'http://localhost:8000/api/v1',
     } ),
-    tagTypes: [ 'Words' ],
+    tagTypes: [ 'Words' ], //auto fetching
     endpoints: ( builder ) => ( {
         getWords: builder.query( {
             // note: an optional `queryFn` may be used in place of `query`

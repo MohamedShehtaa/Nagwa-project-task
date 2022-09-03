@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux/es/exports";
 import { useNavigate } from "react-router-dom";
 
@@ -13,19 +13,27 @@ import AppContainer from '../components/UI/AppContainer'
 import { usePostScoreMutation } from '../services/rankApi'
 
 export default function Question() {
-    const { data, IsError, isLoading } = useGetWordsQuery();
-    const [ nextState, setNextState ] = useState( false );
+    const { data, IsError, isLoading, refetch } = useGetWordsQuery();
     const [ postScore ] = usePostScoreMutation();
     const appStore = useSelector( ( state ) => state.appStore );
+    const [ nextState, setNextState ] = useState( false );
     const dispatch = useDispatch();
     const navigate = useNavigate()
 
-    const count = appStore.count;
     const score = appStore.score * 10;
+    const count = appStore.count;
 
+    const [ dataElmentNo, setDataElmentNo ] = useState( count )
 
+    useEffect( () => {
+        if ( count < 9 ) {
+            setDataElmentNo( count )
+        } else setDataElmentNo( count - 1 )
 
-    const dataElmentNo = count < 9 ? count : count - 1;
+    }, [ count ] )
+    useEffect( () => {
+        refetch();
+    }, [ refetch ] )
 
     const counterHandler = async () => {
         setNextState( false )
@@ -39,7 +47,6 @@ export default function Question() {
             navigate( '/rank' )
 
         }
-
     };
 
     return (

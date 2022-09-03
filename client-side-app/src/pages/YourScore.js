@@ -16,8 +16,8 @@ export default function YourScore() {
     const navigate = useNavigate()
 
     const playAgainHandler = () => {
-        navigate( '/' )
         dispatch( restApp() )
+        navigate( '/' )
     }
     return (
         <AppContainer>
